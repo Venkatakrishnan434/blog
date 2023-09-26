@@ -1,0 +1,11 @@
+development:
+  adapter: mysql2
+  encoding: utf8
+  database: blog
+  pool: 5
+  host: 127.0.0.1
+  username: vmari
+  password: your_password
+  reconnect: true
+  variables:
+    sql_mode: NO_ENGINE_SUBSTITUTION
