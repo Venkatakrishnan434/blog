@@ -5,7 +5,7 @@ class ArticlesController < ApplicationController
   
   def index
     @articles = Article.all
-    # p @article.previous_changes[:title]
+    # p "#{@article.previous_changes[:title]}"
   end
 
   def new
@@ -18,7 +18,6 @@ class ArticlesController < ApplicationController
 
   def create
     @article = Article.new(article_params)
-    # byebug
     if @article.save
       redirect_to @article
     else
@@ -28,7 +27,6 @@ class ArticlesController < ApplicationController
 
   def update
     @article = Article.find(params[:id])
-  #  byebug
     if @article.update(article_params)
       puts "Previous Changes: #{@article.previous_changes[:title]}"
       puts "Previous Changes1: #{@article.saved_change_to_title?}"

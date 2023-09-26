@@ -9,7 +9,6 @@ class Article < ApplicationRecord
 
 
   def log_changes
-    byebug
     if previous_changes.any?
       p "Deprecation warning not raise for previous_changes"
     else
@@ -18,7 +17,6 @@ class Article < ApplicationRecord
   end
 
   def logs_changes
-    byebug
     if saved_change_to_title?
       p "Success"
     end
